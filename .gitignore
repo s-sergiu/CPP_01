@@ -1,0 +1,8 @@
+*.swp
+*.o
+myPhonebook
+megaphone
+tests
+*.pdf
+tags
+*.vim
