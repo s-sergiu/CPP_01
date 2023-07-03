@@ -4,13 +4,11 @@ FLAGS = -std=c++98 -Wall -Werror -Wextra
 
 SRC = main.cpp \
 	  Zombie.cpp \
-	  newZombie.cpp \
-	  randomChump.cpp
+	  zombieHorde.cpp \
 
 OBJ = main.o \
 	  Zombie.o \
-	  newZombie.o \
-	  randomChump.o
+	  zombieHorde.o \
 
 all:$(NAME)
 
