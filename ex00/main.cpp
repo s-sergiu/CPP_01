@@ -8,6 +8,6 @@ int main (void)
 	randomChump("StackZombie");
 	zombie = newZombie("HeapZombie");
 
-	delte(zombie);
+	delete(zombie);
 	return (0);
 }
