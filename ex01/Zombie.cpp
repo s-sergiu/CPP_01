@@ -1,18 +1,23 @@
 
 #include "Zombie.hpp"
 
-Zombie::Zombie (std::string _name)
+Zombie::Zombie()
 {
-	name = _name;
-	announce();
+	std::cout<<"Zombie created."<<std::endl;
 }
 
 Zombie::~Zombie()
 {
-	std::cout<<name<<" died."<<std::endl;
+	std::cout<<"Zombie "<<Id<<" died."<<std::endl;
 }
 
 void	Zombie::announce(void)
 {
-	std::cout<<name<<": BraiiiiiiinnnzzzZ..."<<std::endl;
+	std::cout<<Name<<": BraiiiiiiinnnzzzZ..."<<std::endl;
+}
+
+void	Zombie::setName(std::string name, int id)
+{
+	Name = name;
+	Id = id;
 }

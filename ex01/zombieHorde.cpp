@@ -3,9 +3,11 @@
 
 Zombie* zombieHorde( int N, std::string name )
 {
-	Zombie *zombies[N];
+	Zombie *zombies;
 
+	zombies = new Zombie[N];
+	std::cout<<"Zombies batch created"<<std::endl;
 	for (int i = 0; i < N; i++)
-		zombies[i] = new Zombie(name);
-	return (*zombies);
+		zombies[i].setName(name, i); 
+	return (zombies);
 }

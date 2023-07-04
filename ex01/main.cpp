@@ -4,8 +4,23 @@
 
 int main (void)
 {
-	Zombie *zombies;
+	Zombie *horde1;
+	Zombie *horde2;
 
-	zombies = zombieHorde(10, "arrayOfZombies");
+	horde1 = zombieHorde(10, "horde1");
+	horde2 = zombieHorde(10, "horde2");
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout<<"Zombie "<<i<<" ";
+		horde1[i].announce();
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout<<"Zombie "<<i<<" ";
+		horde2[i].announce();
+	}
+	delete [] horde1;
+	delete [] horde2;
+	system("leaks Zombie");
 	return (0);
 }
