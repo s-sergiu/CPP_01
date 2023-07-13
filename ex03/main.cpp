@@ -1,5 +1,6 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
+#include <stdio.h>
 
 int main()
 {

@@ -3,15 +3,16 @@
 #define HUMANA_CPP
 
 #include "Weapon.hpp"
+#include <iostream>
 
 class HumanA
 {
 	private:
-		Weapon		weapon;
+		Weapon		*weapon;
 		std::string name;
 	public:
 		void	attack();
-		HumanA(std::string _name);
+		HumanA(std::string _name, Weapon &_weapon);
 		~HumanA();
 };
 

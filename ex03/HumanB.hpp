@@ -3,17 +3,18 @@
 #define HUMANB_CPP
 
 #include "Weapon.hpp"
+#include <iostream>
 
 class HumanB
 {
 	private:
-		Weapon		weapon;
+		Weapon		*weapon;
 		std::string name;
 	public:
 		void	attack();
-		void	setWeapon(std::string _type);
-		HumanA(std::string _name);
-		~HumanA();
+		void	setWeapon(Weapon &_weapon);
+		HumanB(std::string _name);
+		~HumanB();
 };
 
 #endif
