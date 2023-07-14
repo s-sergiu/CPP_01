@@ -32,7 +32,10 @@ void	Harl::complain(std::string level)
 
 	std::string levels[4];	
 	functionpointer test[4];
+	Harl obj;
+	int i;
 
+	i = 0;
 	levels[0] = "DEBUG";
 	levels[1] = "INFO";
 	levels[2] = "WARNING";
@@ -42,9 +45,28 @@ void	Harl::complain(std::string level)
 	test[2] = &Harl::warning;
 	test[3] = &Harl::error;
 
-	Harl obj;
+	while (i < 4)
+		if (level == levels[i++])
+			break ;
 
-	for (int i = 0; i < 4; i++)
-		if (levels[i] == level)
-			(obj.*test[i])();
+	if (level != levels[i - 1] && i == 4)
+		std::cout<<"[ Probably complaining about insignificant problems ]"<<std::endl;
+	else
+	{
+		while (true)
+		{
+			switch (i)
+			{
+				case 1:
+					(obj.*test[0])();
+				case 2:
+					(obj.*test[1])();
+				case 3:
+					(obj.*test[2])();
+				case 4:
+					(obj.*test[3])();
+			}
+			break ;
+		}
+	}
 }
